@@ -1,0 +1,22 @@
+bundle:
+  name: retail-lakeflow
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    default: retail_dev
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-c0e82cef-c7a4.cloud.databricks.com/
+  prod:
+    mode: production
+    variables:
+      catalog: retail_prod
+    workspace:
+      host: https://dbc-c0e82cef-c7a4.cloud.databricks.com/

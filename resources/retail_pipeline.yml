@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    retail_pipeline:
+      name: retail-lakeflow-${bundle.target}
+      catalog: ${var.catalog}
+      schema: silver
+      serverless: true
+      libraries:
+        - glob:
+            include: ../src/**
+      configuration:
+        catalog: ${var.catalog}
+        landing_root: /Volumes/${var.catalog}/landing
+
+
+
+        
