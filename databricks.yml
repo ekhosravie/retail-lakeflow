@@ -13,10 +13,10 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://dbc-c0e82cef-c7a4.cloud.databricks.com/
+      host: Your-URL
   prod:
     mode: production
     variables:
       catalog: retail_prod
     workspace:
-      host: https://dbc-c0e82cef-c7a4.cloud.databricks.com/
+      host: Your-URL
